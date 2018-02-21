@@ -1,0 +1,15 @@
+<h1>Restaurant: <%= @restaurant.name %></h1>
+
+<p>Description:
+  <%= @restaurant.address %>
+  <%= @restaurant.phone_number %>
+  <%= @restaurant.category %>
+</p>
+
+<%= link_to "Back to restaurants", restaurants_path %>
+<br>
+<br>
+<%= link_to "Edit my restaurant", edit_restaurant_path %>
+<br>
+<br>
+<%= link_to "Delete my restaurant", restaurant_path(@restaurant), method: :delete %>
