@@ -6,6 +6,15 @@
   <%= @restaurant.category %>
 </p>
 
+<h4>Reviews:</h4>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li>
+      <%=  "#{review.rating}: #{review.content}" %>
+    </li>
+  <% end %>
+</ul>
+
 <%= link_to "Back to restaurants", restaurants_path %>
 <br>
 <br>

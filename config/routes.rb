@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   # delete "restaurants/:id", to: "restaurants#destroy"
 
   resources :restaurants do
-    resources :review, only: [ :index, :new, :create]
+    resources :reviews
+    # resources :reviews, only: [ :index, :new, :create]
   end
-  resources :review, only: [ :show, :edit, :update, :destroy]
+  # resources :reviews, only: [ :show, :edit, :update, :destroy]
 end
